@@ -1,0 +1,282 @@
+<!DOCTYPE html><html class="light" lang="tr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#584234",
+                        "on-primary-fixed-variant": "#005316",
+                        "surface-bright": "#f6fbf0",
+                        "tertiary-fixed-dim": "#e0c0ad",
+                        "background": "#f6fbf0",
+                        "surface-container-low": "#f0f5ea",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-highest": "#dfe4d9",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#ffdeca",
+                        "on-secondary-fixed-variant": "#464747",
+                        "surface-container-high": "#e4eadf",
+                        "primary-fixed": "#96f996",
+                        "on-primary-fixed": "#002105",
+                        "surface": "#f6fbf0",
+                        "on-primary-container": "#067625",
+                        "surface-container": "#eaf0e5",
+                        "error-container": "#ffdad6",
+                        "on-background": "#171d16",
+                        "secondary-container": "#e1dfdf",
+                        "on-surface-variant": "#3f4a3d",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#7adc7d",
+                        "surface-variant": "#dfe4d9",
+                        "on-surface": "#171d16",
+                        "primary-fixed-dim": "#7adc7d",
+                        "on-tertiary-fixed": "#28180c",
+                        "surface-dim": "#d6dcd1",
+                        "secondary-fixed": "#e4e2e2",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "on-secondary-container": "#626263",
+                        "secondary": "#5e5e5e",
+                        "surface-tint": "#006e21",
+                        "tertiary": "#71594a",
+                        "on-tertiary-container": "#796151",
+                        "outline-variant": "#becab9",
+                        "primary": "#006e21",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#edf3e7",
+                        "primary-container": "#98fb98",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#6f7a6c",
+                        "inverse-surface": "#2c322b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#fddcc8"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap-lg": "1rem",
+                        "stack-gap-sm": "0.5rem",
+                        "section-margin": "1.5rem",
+                        "stack-gap-md": "0.75rem",
+                        "container-padding": "1.25rem"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                        "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #EEEEEE; /* Override for high-key background */
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-on-surface">
+<!-- Top AppBar Navigation Shell -->
+<nav class="sticky top-0 z-50 bg-surface flex justify-between items-center w-full px-5 py-3 transition-all duration-300">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-100">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm font-bold text-on-surface tracking-tight">STOK TAKİP</h1>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-100">
+<span class="material-symbols-outlined text-on-surface">settings</span>
+</button>
+</nav>
+<main class="px-container-padding pb-32 pt-stack-gap-md space-y-stack-gap-lg">
+<!-- Alerts & Statistics (Bento Style Fragment) -->
+<div class="grid grid-cols-1 gap-stack-gap-md">
+<!-- Warning Card -->
+<div class="bg-tertiary-container rounded-xl p-4 flex items-start gap-4 border border-outline-variant soft-shadow relative overflow-hidden">
+<div class="p-2 bg-tertiary rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary" style="font-variation-settings: &quot;FILL&quot; 1;">warning</span>
+</div>
+<div class="flex-1">
+<h3 class="text-label-md font-label-md text-on-tertiary-fixed uppercase tracking-wider">Kritik Stok Uyarısı</h3>
+<p class="text-body-md text-on-tertiary-fixed-variant font-medium">15 Ürün Kritik Stok Seviyesinde!</p>
+<button class="mt-2 text-label-md font-bold text-primary flex items-center gap-1">
+                        Görüntüle <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex gap-stack-gap-sm items-center">
+<div class="relative flex-1 group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full h-11 pl-10 pr-4 bg-surface-container-lowest border-outline-variant rounded-xl focus:ring-1 focus:ring-primary focus:border-primary border-0 soft-shadow transition-all text-body-md" placeholder="marka, model" type="text" id="product-search-input">
+</div>
+<button class="h-11 px-4 bg-primary-container text-on-primary-container font-label-md rounded-xl flex items-center gap-2 soft-shadow hover:opacity-90 active:scale-95 transition-all" id="filter-button">
+<span class="">FILTER</span>
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+</div>
+<!-- Inventory List -->
+<section class="space-y-stack-gap-md">
+<div class="flex justify-between items-center px-1">
+<h2 class="text-label-md font-bold text-on-surface-variant uppercase tracking-widest">Envanter Listesi</h2>
+<span class="text-label-sm font-label-sm text-outline">124 Toplam</span>
+</div>
+<!-- Item Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 flex gap-4 soft-shadow hover:bg-surface-container-low transition-colors group">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean product shot of a space grey Apple iPhone 13 against a minimalist soft green studio background. The lighting is diffused and bright, creating a high-end tech aesthetic that matches the app's modern minimalism. The composition is focused and sharp, highlighting the premium design of the smartphone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY5A_m9m_nneppD8aU6bIzSBE4NdIdH_nNBFkD_El7Rjweq-lARHiOfl5wq84rmspxkwTak8QCI9jJnOgV2j_OppNGWXQghrOGpU7uZsgu0ZTFCCMXVz_3BBfr3mBBKK4q9-_JyGs-TeYG8JrQtfdtW0YEZr92SwEFiiMh5zhZqkNcHty_Y1QfuW3Lu05ag9WX1NjFP8u0dQswDMhb1dOSRz_2sQnlYttoNbr3gAVJ_oITqoz4SMOvZHHDPpOklf9lMeRyft5kzGBV">
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant uppercase">Marka - Model</p>
+<h4 class="text-body-lg font-bold text-on-surface">Apple iPhone 13</h4>
+</div>
+<span class="px-2 py-0.5 bg-error-container text-on-error-container text-[10px] font-bold rounded-full">AZALIYOR</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-headline-sm font-headline-sm text-primary">5</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">adet</span>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-outline uppercase">Alış/Satış</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant font-medium">₺120 / ₺180</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 flex gap-4 soft-shadow hover:bg-surface-container-low transition-colors group">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Professional studio photograph of a Samsung Galaxy S21 in phantom violet with a sleek finish. The device is placed on a pristine white surface with subtle soft shadows under bright daylight-mimicking lamps. The overall style is clean, airy, and clinical, emphasizing the smartphone's modern hardware details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzVDyftIGv77WEBhOpsK_2objr3FFwOfN5NdWR6gdGBrEvPszFb4-li7oX_RDCvua1yrkVlz9D5AMdSUdTjZsboJLSznfdxLDsOWj7jU8_cwV4XTpCSid8qbP3gDlXN58GvUDqntYm3ASIXWY89IGneGHMwK2fik988B5hALlYScapdEeB1cfsfrZ7l0Sljhx1DtcM7trfkHTotLV5NlUh4dOZG8ATZb3eV092LEFu9b6qwEKeduKlIYYeRY7NcQMpjIZzidoa6jF3">
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant uppercase">Marka - Model</p>
+<h4 class="text-body-lg font-bold text-on-surface">Samsung S21</h4>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant text-[10px] font-bold rounded-full">KRİTİK</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-headline-sm font-headline-sm text-error">2</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">adet</span>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-outline uppercase">Alış/Satış</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant font-medium">₺120 / ₺180</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-3 flex gap-4 soft-shadow hover:bg-surface-container-low transition-colors group border-l-4 border-primary">
+<div class="w-20 h-20 rounded-lg bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A macro shot of a sleek smartphone screen reflecting soft mint green and white lights. The background is a blurred minimalist inventory warehouse with bright, diffused lighting. The image conveys high-tech efficiency and cleanliness, using a palette of soft whites and the signature brand green." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1BrWps-lsqtI5bJSegJYegWQiScMV9LpDqC1KY3VwinX3TholtdzMvPoyUftFAvsbpj_3aOtqI2drqI6lht5534AWTlru4d3uv0pHms3t-QfYD4jiFbjEda1fPUBxX1U3mh7k8LeYEBn6a9awEhj_omZgGSb5H5adThltTqm0_CGqi944QYKfjVnziRT2q0HJ2WsFGzUV9SS2QGbREm0yiDeaaIVIQzpKPcM5O94bUT9M3Em1Fbo1XP1h4kR10C0ihr8Vlz5DdIUU">
+</div>
+<div class="flex-1 flex flex-col justify-between py-1">
+<div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant uppercase">Marka - Model</p>
+<h4 class="text-body-lg font-bold text-on-surface">Samsung S21 Ultra</h4>
+</div>
+<span class="px-2 py-0.5 bg-primary-container text-on-primary-container text-[10px] font-bold rounded-full">YETERLİ</span>
+</div>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-headline-sm font-headline-sm text-primary">12</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant ml-1">adet</span>
+</div>
+<div class="text-right">
+<p class="text-[10px] text-outline uppercase">Alış/Satış</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant font-medium">₺120 / ₺180</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-5 pb-6 pt-3 bg-surface/80 backdrop-blur-md border-t border-outline-variant rounded-t-xl shadow-lg">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim hover:bg-primary-container/20 rounded-lg p-2 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-sm font-label-sm mt-1">Ana Sayfa</span>
+</a>
+<!-- FAB Integration into Nav -->
+<div class="relative -top-6">
+<button class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all" id="filter-button">
+<span class="material-symbols-outlined text-[32px]">add_circle</span>
+</button>
+</div>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-secondary-fixed-dim hover:bg-primary-container/20 rounded-lg p-2 transition-all active:scale-90 duration-200" href="#" id="nav-details">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-label-sm font-label-sm mt-1">Detaylar</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.soft-shadow').forEach(card => {
+            card.addEventListener('touchstart', () => {
+                card.classList.add('scale-[0.98]');
+            });
+            card.addEventListener('touchend', () => {
+                card.classList.remove('scale-[0.98]');
+            });
+        });
+
+        // Simple scroll behavior for top bar
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > lastScroll && currentScroll > 50) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+
+
+</body></html>

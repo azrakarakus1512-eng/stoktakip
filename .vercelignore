@@ -1,0 +1,15 @@
+node-portable/
+stitch_stitch_stock_tracking_app/
+node_modules/
+public/
+server.js
+stock.db
+walkthrough.md
+implementation_plan.md
+task.md
+design_system/
+*.log
+node.zip
+package.json
+package-lock.json
+deploy.ps1
